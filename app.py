@@ -1,8 +1,9 @@
 # -*- coding:utf-8 -*-
 import streamlit as st
-from utils import  html_temp
+from utils import html_temp
 from utils import dec_temp
 from eda_app import run_eda_app
+from ml_app import run_ml_app
 
 def main():
     st.markdown(html_temp, unsafe_allow_html= True)
@@ -16,7 +17,7 @@ def main():
     elif choice == 'EDA':
         run_eda_app()
     elif choice == 'ML':
-        pass
+        run_ml_app()
     else:
         st.subheader('About')
 
